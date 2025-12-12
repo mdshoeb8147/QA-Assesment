@@ -1,0 +1,36 @@
+To run Api Tests use the command below
+   pytest api_tests.py -v
+
+1.Success validation
+
+Validates status code 200
+Checks content type1.
+Verifies response structure
+
+2.Content validation 
+
+Validates existence of required keys
+Checks data types
+Verifies non-empty values for critical fields
+
+3.Error handling 
+
+Tests 404 for non-existent resources
+Validates error response structure
+
+
+
+
+To run UI Tests use the command below
+  Install: pip install selenium
+  python ui_tests.py
+   
+The test does:
+
+Opens website
+Checks page title
+Looks for logo/image
+Checks for headings
+Clicks first link if found
+Closes browser
+
