@@ -56,4 +56,4 @@ def invalid_email():
     response = requests.post("https://reqres.in/api/login", json=login_data)
     assert response.status_code == 400
 
-    # TO Run     pytest api_tests.py -v
+   
