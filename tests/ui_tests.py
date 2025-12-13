@@ -6,7 +6,6 @@ driver = webdriver.Chrome()
 driver.maximize_window()
 
 try:
-    #  Check website loads
     driver.get("https://www.iamdave.ai")
     time.sleep(3)
     
@@ -29,7 +28,6 @@ try:
     if len(headings) > 0:
         print("Headings is present ")
     
-    # Test 4: Look for buttons
     buttons = driver.find_elements(By.TAG_NAME, "button")
     links = driver.find_elements(By.TAG_NAME, "a")
     

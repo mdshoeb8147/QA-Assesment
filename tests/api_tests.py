@@ -18,7 +18,7 @@ def response_content():
     assert data["data"]["id"] == 1
 
  
-#  test single user details
+#   single user 
 def single_user():
     response = requests.get("https://reqres.in/api/users/2")
     assert response.status_code == 200
@@ -27,13 +27,13 @@ def single_user():
     assert "first_name" in data["data"]
     assert "last_name" in data["data"]
 
-# User not found test
+# User not found 
 def user_not_found():
     response = requests.get("https://reqres.in/api/users/99999")
 
     assert response.status_code == 404
 
-    # delete user test
+    # delete user 
 def test_delete_user():
     """Test deleting a user"""
     response = requests.delete("https://reqres.in/api/users/2")
@@ -50,10 +50,9 @@ def password_error():
     data = res.json()
     assert data["error"] == "Missing password"
 
-# invalid email login test
+# invalid email login 
 def invalid_email():
     login_data = {"email": "invalid", "password": "test"}
     response = requests.post("https://reqres.in/api/login", json=login_data)
     assert response.status_code == 400
 
-   

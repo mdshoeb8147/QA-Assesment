@@ -34,3 +34,10 @@ Checks for headings
 Clicks first link if found
 Closes browser
 
+for load tests use the command below
+
+pip install locust
+   Locust (for load testing)
+
+   We tested the Reqres API endpoint:
+   GET https://reqres.in/api/users/2
